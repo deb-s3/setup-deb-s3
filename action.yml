@@ -15,3 +15,7 @@ runs:
         sudo apt-get update
         sudo apt-get install deb-s3
       shell: bash
+      if: runner.os == 'Linux'
+    - run: gem install deb-s3
+      shell: bash
+      if: runner.os == 'macOS'
