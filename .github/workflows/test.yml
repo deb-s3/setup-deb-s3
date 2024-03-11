@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: 'test ${{ matrix.os }}'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup deb-s3
+        uses: ./
+
+      - name: Test deb-s3
+        run: deb-s3 --version
