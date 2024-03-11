@@ -18,4 +18,4 @@ jobs:
         uses: ./
 
       - name: Test deb-s3
-        run: deb-s3 --version
+        run: deb-s3
