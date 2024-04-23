@@ -10,5 +10,5 @@ steps:
     uses: actions/checkout@v3
 
   - name: Setup deb-s3
-    uses: alw3ys/setup-deb-s3@v1
+    uses: deb-s3/setup-deb-s3@v1
 ```
